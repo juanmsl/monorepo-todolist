@@ -17,13 +17,11 @@ services:
     restart: on-failure
     depends_on:
       - database
-    env_file:
-      - backend-variables.env
 
   backend-nginx:
     build: ./backend-nginx
-    image: todolist-nginx:latest
-    container_name: todolist-nginx
+    image: todolist-api-nginx:latest
+    container_name: todolist-backend-nginx
     restart: always
     depends_on:
       - backend
@@ -35,6 +33,6 @@ services:
     image: todolist-portal:latest
     container_name: todolist-frontend
     depends_on:
-      - backend-nginx
+      - backend
     ports:
       - 80:80

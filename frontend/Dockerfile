@@ -1,5 +1,5 @@
 # stage1 - build react app first
-FROM 16.13.1-alpine3.15 as build
+FROM node:16.13.1-alpine3.15 as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY ./package.json ./yarn.lock /app/

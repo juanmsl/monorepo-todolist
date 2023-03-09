@@ -1,6 +1,9 @@
 {
-  "name": "frontend",
+  "name": "todolist-frontend",
   "version": "0.1.0",
+  "description": "Todolist portal app",
+  "repository": "https://github.com/juanmsl/monorepo-todolist",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
