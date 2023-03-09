@@ -21,6 +21,23 @@ This is a basic todolist app
 
 ## Information
 
+### Database
+
+You can access to the database using your favorite database manager with following credentials
+
+```
+DATABASE_HOST=127.0.0.1
+DATABASE_NAME=todolist-db
+DATABASE_PASSWORD=backend
+DATABASE_PORT=5432
+DATABASE_USER=backend
+```
+
+### Backend
+
+You can open the API on your web browser typing
+http://localhost:8080
+
 ### Portal
 
 You can open the portal on your web browser typing
