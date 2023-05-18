@@ -1,10 +1,14 @@
-import express from "express";
-const app = express();
+import { Server } from './bootstrap';
+import App from './app';
 
-app.get("/", (req, res) => {
-  res.send({
-    message: "Hello world!"
-  });
-});
+const server = new Server(App);
 
-app.listen(3000);
+
+(async () => {
+  try {
+    const result = await server.initialize(8080);
+    console.log(result);
+  } catch ( error ) {
+    console.log(error);
+  }
+})();
