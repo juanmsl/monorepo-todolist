@@ -1,6 +1,14 @@
 {
   "watch": ["src"],
-  "ext": ".ts",
-  "ignore": [],
-  "exec": "npx ts-node ./src/index.ts"
+  "ext": ".ts .json",
+  "ignore": ["node_modules"],
+  "exec": "ts-node ./src/index.ts",
+  "execMap": {
+    "ts": "ts-node"
+  },
+  "events": {
+    "restart": "yarn run lint"
+  },
+  "verbose": true,
+  "restartable": "rs"
 }
